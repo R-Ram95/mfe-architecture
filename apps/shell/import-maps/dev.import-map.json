@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "react": "https://esm.sh/react",
+    "react-dom": "https://esm.sh/react-dom",
+    "react-router-dom": "https://esm.sh/react-router-dom",
+    "react-app": "https://d2s3mw0v1f3cif.cloudfront.net/react-app-dev.js",
+    "vue-app": "https://dct0zl4ldh29k.cloudfront.net/vue-app-dev.js",
+    "angular-app": "https://d23m92cai2rvzc.cloudfront.net/angular-app-dev.js",
+    "shared-ui": "https://d1cnbfnbeov4sy.cloudfront.net/shared-ui.js",
+    "util-module": "https://dkksu0fhny9yu.cloudfront.net/index.js"
+  }
+}

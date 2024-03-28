@@ -1,0 +1,17 @@
+.dotted-box {
+    width: 80%;
+    max-width: 400px;
+    height: 80px;
+    padding-bottom: 40%;
+    border: 2px dotted #000;
+    position: relative;
+    margin: 16px;
+}
+
+.dotted-box-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+}

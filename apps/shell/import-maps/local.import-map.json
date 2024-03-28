@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "react-app": "http://localhost:3001/src/main.tsx",
+    "vue-app": "http://localhost:3002/src/main.ts",
+    "angular-app": "http://localhost:3003/src/main.ts"
+  }
+}

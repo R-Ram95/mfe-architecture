@@ -1,0 +1,47 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "typecheck",
+          "build-storybook"
+        ]
+      }
+    }
+  },
+  "namedInputs": {
+    "noMarkdown": ["!{projectRoot}/**/*.md"],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/tsconfig.storybook.json"
+    ],
+    "sharedGlobals": []
+  },
+  "targetDefaults": {
+    "build": {
+      "inputs": ["noMarkdown", "^noMarkdown"],
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "inputs": ["noMarkdown", "^noMarkdown"],
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "inputs": ["noMarkdown", "^noMarkdown"]
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "vite-mfe-wc",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "VITE_ENV=local nx run-many -t dev -p shell react-app vue-app angular-app --maxParallel=10",
+    "preview": "VITE_ENV=dev nx run-many -t build preview -p shell react-app vue-app angular-app shared-ui util-module --maxParallel=10",
+    "build": "nx run-many -t build",
+    "build:dev": "VITE_ENV=dev nx run-many -t build -p shell react-app vue-app angular-app shared-ui --maxParallel=10",
+    "build-storybook": "nx run shared-ui:build-storybook",
+    "build:shared-ui": "nx run shared-ui:build",
+    "test-affected": "nx affected -t test --parallel=10 --base=origin/main --plain",
+    "storybook": "nx run shared-ui:storybook",
+    "graph": "nx graph",
+    "destroy:dev": "nx run-many -t destroy:dev -p shell react-app vue-app angular-app shared-ui util-module --maxParallel=10",
+    "destroy:prod": "nx run-many -t destroy:prod -p shell react-app vue-app angular-app shared-ui util-module --maxParallel=10"
+  },
+  "keywords": [],
+  "author": "Accolite",
+  "license": "MIT",
+  "devDependencies": {
+    "nx": "18.0.4",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {}
+}

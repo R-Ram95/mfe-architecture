@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "react": "https://esm.sh/react",
+    "react-dom": "https://esm.sh/react-dom",
+    "react-router-dom": "https://esm.sh/react-router-dom",
+    "react-app": "http://localhost:3001/bundle.js"
+  }
+}
